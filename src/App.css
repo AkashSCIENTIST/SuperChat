@@ -1,38 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+body {
+  background-color: white;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Quicksand";
+  /*background-image: url("https://i.redd.it/qwd83nc4xxf41.jpg");*/
+}
+
 .App {
   text-align: center;
+  /*max-width: 728px;
+  margin: 0 auto;*/
+  border-radius: 100px;
+  border: #1e1e24;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App header {
+  background-color: #181717;
+  height: 8%;
+  min-height: 50px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  /*max-width: 728px;*/
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App section {
+  display: flex;
+  /*max-width: 728px;*/
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
+  background-image: url("https://i.redd.it/qwd83nc4xxf41.jpg");
+  background-color: #f9f9f9;
+  border: #1e1e24;
+}
+
+main {
+  padding: 10px;
+  border: #1e1e24;
+  height: 80vh;
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
+}
+
+main::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: blue;
+}
+
+form {
+  height: 8%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fafafa;
+  width: 100%;
+  margin-top: 0;
+  /*max-width: 728px;*/
+  display: flex;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  z-index: 100;
+  float: center;
+}
+
+form button {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: blue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: rgb(58, 58, 58);
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input::placeholder {
+  font-family: "Quicksand";
+}
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: "Quicksand";
+}
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Quicksand";
+}
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  font-family: "Quicksand";
+}
+input:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Quicksand";
+}
+
+button {
+  background-color: #2f2f2f;
+  font-family: "Quicksand";
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.dummy {
+  height: 0px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sign-in {
+  color: #282c34;
+  background: #f9f9f9;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border-width: 2px;
+}
+
+.sign-in button {
+  border-radius: 20px;
+}
+
+ul,
+li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  color: #0a0a0a;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+  align-items: right;
+}
+
+.sent p {
+  color: blue;
+  /*background: #0b93f6;*/
+  background-color: white;
+  align-self: flex-end;
+  border: 3px blue solid;
+  float: right;
+  text-align: left;
+  /*margin-bottom: -12px;*/
+}
+
+.sent img {
+  margin-bottom: -22px;
+}
+
+.sent h6 {
+  color: blue;
+  float: right;
+}
+
+.received p {
+  /*background: #e5e5ea;*/
+  background-color: #0f0f0f;
+  color: white;
+  align-items: left;
+  text-align: left;
+  float: left;
+}
+
+.received img {
+  margin-bottom: 14px;
+}
+
+.received h6 {
+  float: left;
+}
+
+.deleteButton {
+  background: transparent;
+  color: blue;
+  height: 2px;
+  margin-bottom: -10px;
+  margin-top: -1px;
+  margin-right: -10px;
+}
+
+.usernamesent {
+  color: wheat;
+}
+
+.received {
+  color: darkslategray;
+  background-color: transparent;
+  align-items: flex-end;
+  margin-bottom: -6px;
+}
+
+h6 {
+  line-height: 0px;
+  margin-bottom: -5px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
 }
