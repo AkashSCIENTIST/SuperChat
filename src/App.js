@@ -7,13 +7,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD29iTHtJX8LifnXg3ozQ_inUY4pdygkis",
-  authDomain: "akash-super-chat.firebaseapp.com",
-  projectId: "chat-app-edb92",
-  storageBucket: "chat-app-edb92.appspot.com",
-  messagingSenderId: "586806106961",
-  appId: "1:586806106961:web:06b429f9e1a5e0a70b9170",
-  measurementId: "G-7E7HYJYGHZ",
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: "",
 };
 
 firebase.initializeApp(firebaseConfig);
